@@ -1,5 +1,5 @@
 
-## **numpyy**
+## **codebank**
 
 ### A Python Package for Easy Access to Predefined Code Snippets for Exams
 
@@ -31,7 +31,8 @@ After installation, you can import the package and start retrieving predefined c
 #### **Example 1: Retrieve a Function to Find Prime Numbers**
 
 ```python
-from numpyy.mllab import one
+import codebank
+from codebank.mllab import one
 
 # Call the function to retrieve the code
 code_snippet = one()
@@ -42,19 +43,26 @@ print(code_snippet)
 
 Output:
 ```python
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
+import numpy as np
+import pandas as pd
+df=pd.read_csv('Iris1.csv')
+df.head()
+from sklearn import tree
+from sklearn.model_selection import train_test_split
+X=df[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm']]
+Y=df['Species']
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.2)
+model=tree.DecisionTreeClassifier()
+model.fit(X_train,Y_train)
+print("score",model.score(X_test,Y_test))
+tree.plot_tree(model)
+
 ```
 
 #### **Example 2: Retrieve a Sorting Algorithm (Bubble Sort)**
 
 ```python
-from numpyy.mllab import two
+from codebank.mllab import two
 
 code_snippet = two()
 print(code_snippet)
