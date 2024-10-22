@@ -19,7 +19,7 @@ This package provides easy access to predefined Python code snippets that can be
 To install the package, use pip:
 
 ```bash
-pip install your_package_name
+pip install codebank
 ```
 
 ---
@@ -32,10 +32,9 @@ After installation, you can import the package and start retrieving predefined c
 
 ```python
 import codebank
-from codebank.mllab import one
 
-# Call the function to retrieve the code
-code_snippet = one()
+# Call the required function to retrieve the code
+code_snippet = codebank.one()   
 
 # The code will be printed in the console, and you can copy it
 print(code_snippet)
@@ -59,31 +58,19 @@ tree.plot_tree(model)
 
 ```
 
-#### **Example 2: Retrieve a Sorting Algorithm (Bubble Sort)**
-
-```python
-from codebank.mllab import two
-
-code_snippet = two()
-print(code_snippet)
-```
-
-Output:
-```python
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-```
-
 ### **Available Functions**
 
-- `one()`: Returns a Python function to check if a number is prime.
-- `two()`: Returns a bubble sort implementation.
-- `three()`: Returns a Python function to generate a Fibonacci sequence.
-- `four()`: Returns a function to compute the factorial of a number.
+- `one()`: Decision Tree Classifier
+- `two()`: Spam Detection using Support Vector Machine
+- `three()`: Face Detection using Cascading
+- `four()`: Face Recognisation using ANN
+- `five()`: K Nearest Neighbour
+- `fivea()`: Adult Salary Prediction using Random Forest
+- `six()`: Multi Layer Perceptron for Character Recognisation
+- `seven()`: Sentiment Analysis using Random Forest 
+- `eight()`: Bayesian Network for Heart Disease
+- `nine()`: Fraud Detection using ANN
+
 - More functions can be added to cover additional topics such as searching, recursion, data structures, etc.
 
 ---
